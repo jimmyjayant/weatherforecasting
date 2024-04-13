@@ -1,0 +1,1 @@
+This is a weather forecasting website built using html5, css3, and vanilla javascript.
