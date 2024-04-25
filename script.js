@@ -81,4 +81,11 @@ function geoloc()
 
 window.addEventListener("load", geoloc);
 
+let inputarea = document.getElementById('otherlocation');
 
+inputarea.addEventListener("keypress", function(event) {
+    if(event.key === "Enter") {
+      event.preventDefault();
+      document.getElementById("searchbutton").click();
+    }
+  });
