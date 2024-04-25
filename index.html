@@ -12,10 +12,32 @@
     </head>
     <body>
     <div class="container">
-        <div class="icon">---</div>
-        <div class="temp">-°C</div>
-        <div class="summary">----</div>
-        <div class="location"></div>
+        <div class="otherlocation">
+            <input type="text" name="otherlocation" id="otherlocation" placeholder="Enter the location here">
+            <button type="button" onclick="srcloc()">
+              <img src="search icon.jpg" alt="search button">
+            </button>
+            <h3>
+                Searched Location:- 
+            </h3>
+
+            <div class="icon1">---</div>
+            <div class="temp1">-°C</div>
+            <div class="summary1">----</div>
+            <div class="location1"></div>
+        </div>
+
+        <hr>
+
+        <div class="currentlocation">
+            <h3>
+                Current Location:- 
+            </h3>
+            <div class="icon2">---</div>
+            <div class="temp2">-°C</div>
+            <div class="summary2">----</div>
+            <div class="location2"></div>
+        </div>        
     </div>
     <script src="script.js"></script>
     </body>
