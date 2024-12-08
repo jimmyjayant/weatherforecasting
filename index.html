@@ -3,42 +3,53 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="The Weather Forecasting Website built using HTML5, CSS3 and Vanilla Javascript.">
+        <meta name="author" content="This website is built by Jimmy Jayant.">
+        <meta name="keywords" content="html5, css3, vanilla js, jimmy jayant, weather forecasting">
         <title>
             Weather Forecasting 
         </title>
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/x-icon" href="favicon.png">
-
     </head>
     <body>
-    <div class="container">
-        <div class="otherlocation">
-            <input type="text" name="otherlocation" id="otherlocation" placeholder="Enter the location here">
-            <button type="button" onclick="srcloc()" id="searchbutton">
-              <img src="search icon.jpg" alt="search button">
-            </button>
-            <h3>
-                Searched Location:- 
-            </h3>
-
-            <div class="icon1">---</div>
-            <div class="temp1">-°C</div>
-            <div class="summary1">----</div>
-            <div class="location1"></div>
+        <div class="main">
+            <div class="header">
+                    <img src="favicon.png" alt="Weather Forecasting Website Logo">
+                <h1>
+                    Weather Forecasting 
+                </h1>
+            </div>
+            <div class="container">
+                <div class="otherlocation">
+                    <input type="text" name="otherlocation" id="otherlocation" placeholder="Enter the location here">
+                    <button type="button" onclick="srcloc()" id="searchbutton">
+                    <img src="search icon.jpg" alt="search button">
+                    </button>
+                    <h3>
+                        Searched Location:- 
+                    </h3>
+    
+                    <div class="icon1">---</div>
+                    <div class="temp1">-°C</div>
+                    <div class="summary1">----</div>
+                    <div class="location1"></div>
+                </div>
+    
+                <hr>
+    
+                <div class="currentlocation">
+                    <h3>
+                        Current Location:- 
+                    </h3>
+                    <div class="icon2">---</div>
+                    <div class="temp2">-°C</div>
+                    <div class="summary2">----</div>
+                    <div class="location2"></div>
+                </div>        
+            </div>
         </div>
-
-        <hr>
-
-        <div class="currentlocation">
-            <h3>
-                Current Location:- 
-            </h3>
-            <div class="icon2">---</div>
-            <div class="temp2">-°C</div>
-            <div class="summary2">----</div>
-            <div class="location2"></div>
-        </div>        
-    </div>
+        
     <script src="script.js"></script>
     </body>
 </html>
