@@ -10,46 +10,231 @@
             Weather Forecasting 
         </title>
         <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image/x-icon" href="favicon.png">
+        <link rel="icon" type="image/x-icon" href="Images/favicon.png">
     </head>
     <body>
         <div class="main">
             <div class="header">
-                    <img src="favicon.png" alt="Weather Forecasting Website Logo">
-                <h1>
-                    Weather Forecasting 
-                </h1>
-            </div>
-            <div class="container">
-                <div class="otherlocation">
-                    <input type="text" name="otherlocation" id="otherlocation" placeholder="Enter the location here">
-                    <button type="button" onclick="srcloc()" id="searchbutton">
-                    <img src="search icon.jpg" alt="search button">
-                    </button>
-                    <h3>
-                        Searched Location:- 
-                    </h3>
-    
-                    <div class="icon1">---</div>
-                    <div class="temp1">-°C</div>
-                    <div class="summary1">----</div>
-                    <div class="location1"></div>
+                <div class="item1"></div>
+                <div class="item2"></div>
+                <div class="item3"></div>
+                <div class="item4"></div>
+                <div class="item5"></div>
+                <div class="item6">
+                    <img src="Images/favicon.png" alt="Weather Forecasting Website Logo">
+                    <h1>
+                        Weather Forecasting 
+                    </h1>
                 </div>
-    
+                <div class="item7"></div>
+            </div>
+
+            <div class="currentdatetime"></div>
+
+            <!--<div class="blur"></div> -->
+
+            <div class="container">
+
+                <div class="searchlocation">
+                    <h3>
+                        Searched Location 
+                    </h3>
+
+                    <div class="search">
+                        <input type="search" name="searchlocation" id="searchlocation" placeholder="Enter the location here">
+                        <button type="button" onclick="srcloc()" id="searchbutton">
+                            <img src="Images/search.svg" alt="search button">
+                        </button>
+                    </div>
+
+                    <div class="info1">
+                        <div class="icon1"></div>
+                        <div class="temp1"></div>
+                        <div class="summary1"></div>
+                        <div class="location1"></div>
+                    </div>
+                    
+                    <table id="searchlocdata">
+                        <caption>More Info</caption>
+                        <tr>
+                            <th>City</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Country</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Weather</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Temperature</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Pressure</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Humidity</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Longitude</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Latitude</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Wind Speed</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Wind Degree</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Feels Like</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Min Temp</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Max Temp</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Sea Level</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Ground Level</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Sun Rise</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Sun Set</th>
+                            <td></td>
+                        </tr>
+                    </table>
+
+                    <video id="searchlocationvideo" autoplay muted loop>
+                        <source src="#" type="video/mp4">
+                        Your browser does not support HTML5 video. 
+                    </video>
+
+                    <div class="rgba"></div>
+                </div>
+
                 <hr>
-    
+
                 <div class="currentlocation">
                     <h3>
-                        Current Location:- 
+                        Current Location 
                     </h3>
-                    <div class="icon2">---</div>
-                    <div class="temp2">-°C</div>
-                    <div class="summary2">----</div>
-                    <div class="location2"></div>
-                </div>        
+
+                    <div class="info2">
+                        <div class="icon2"></div>
+                        <div class="temp2"></div>
+                        <div class="summary2"></div>
+                        <div class="location2"></div>
+                    </div>
+                    
+
+                    <table id="currentlocdata">
+                        <caption>More Info</caption>
+                        <tr>
+                            <th>City</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Country</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Weather</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Temperature</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Pressure</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Humidity</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Longitude</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Latitude</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Wind Speed</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Wind Degree</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Feels Like</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Min Temp</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Max Temp</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Sea Level</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Ground Level</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Sun Rise</th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>Sun Set</th>
+                            <td></td>
+                        </tr>
+                    </table>
+
+                    <video id="currentlocationvideo" autoplay muted loop>
+                        <source src="#" type="video/mp4">
+                        Your browser does not support HTML5 video. 
+                    </video>
+
+                    <div class="rgba"></div>
+                </div>
+
             </div>
         </div>
         
-    <script src="script.js"></script>
+        <script src="script.js"></script>
+        <noscript>
+            This Web Browser does not support JavaScript. 
+        </noscript>
     </body>
 </html>
