@@ -25,41 +25,41 @@ body {
     background-position:center;
     background-repeat:no-repeat;
     -webkit-animation-name:backgroundmarquee;
-            animation-name:backgroundmarquee;
+    animation-name:backgroundmarquee;
     -webkit-animation-duration:100s;
-            animation-duration:100s;
+    animation-duration:100s;
     -webkit-animation-iteration-count:infinite;
-            animation-iteration-count:infinite;
+    animation-iteration-count:infinite;
     -webkit-animation-timing-function:linear;
-            animation-timing-function:linear;
+    animation-timing-function:linear;
 }
 
 @-webkit-keyframes backgroundmarquee {
-    0% {background-image:url('clear sky.jpg');}
-    10% {background-image:url('cloudy.jpg');}
-    20% {background-image:url('cloudy1.jpg');}
-    30% {background-image:url('fog.jpg');}
-    40% {background-image:url('heat.jpg');}
-    50% {background-image:url('lightning.jpg');}
-    60% {background-image:url('rainy.jpg');}
-    70% {background-image:url('storm.jpg');}
-    80% {background-image:url('summer.jpg');}
-    90% {background-image:url('winter.jpg');}
-    100% {background-image:url('clear sky.jpg');}
+    0% {background-image:url('Images/clear sky.jpg');}
+    10% {background-image:url('Images/cloudy.jpg');}
+    20% {background-image:url('Images/cloudy1.jpg');}
+    30% {background-image:url('Images/fog.jpg');}
+    40% {background-image:url('Images/heat.jpg');}
+    50% {background-image:url('Images/lightning.jpg');}
+    60% {background-image:url('Images/rainy.jpg');}
+    70% {background-image:url('Images/storm.jpg');}
+    80% {background-image:url('Images/summer.jpg');}
+    90% {background-image:url('Images/winter.jpg');}
+    100% {background-image:url('Images/clear sky.jpg');}
 }
 
 @keyframes backgroundmarquee {
-    0% {background-image:url('clear sky.jpg');}
-    10% {background-image:url('cloudy.jpg');}
-    20% {background-image:url('cloudy1.jpg');}
-    30% {background-image:url('fog.jpg');}
-    40% {background-image:url('heat.jpg');}
-    50% {background-image:url('lightning.jpg');}
-    60% {background-image:url('rainy.jpg');}
-    70% {background-image:url('storm.jpg');}
-    80% {background-image:url('summer.jpg');}
-    90% {background-image:url('winter.jpg');}
-    100% {background-image:url('clear sky.jpg');}
+    0% {background-image:url('Images/clear sky.jpg');}
+    10% {background-image:url('Images/cloudy.jpg');}
+    20% {background-image:url('Images/cloudy1.jpg');}
+    30% {background-image:url('Images/fog.jpg');}
+    40% {background-image:url('Images/heat.jpg');}
+    50% {background-image:url('Images/lightning.jpg');}
+    60% {background-image:url('Images/rainy.jpg');}
+    70% {background-image:url('Images/storm.jpg');}
+    80% {background-image:url('Images/summer.jpg');}
+    90% {background-image:url('Images/winter.jpg');}
+    100% {background-image:url('Images/clear sky.jpg');}
 }
 
 .currentdatetime {
@@ -83,7 +83,7 @@ body {
     height:100%;
     width:100%;
     -webkit-backdrop-filter:blur(5px);
-            backdrop-filter:blur(5px);
+    backdrop-filter:blur(5px);
 }
 
 .header img {
@@ -125,27 +125,27 @@ body {
 }
 
 .item1 {
-    background-image:url('Images/clearsky.jpg');
+    background-image:url('Images/Header/clearskyresize.jpg');
     grid-area:1 / 1 / 2 / span 1;
 }
 
 .item2 {
-    background-image:url('Images/fogresize.jpg');
+    background-image:url('Images/Header/fogresize.jpg');
     grid-area:1 / 2 / 2 / span 1;
 }
 
 .item3 {
-    background-image:url('Images/rainyresize.jpg');
+    background-image:url('Images/Header/rainyresize.jpg');
     grid-area:1 / 3 / 2 / span 1;
 }
 
 .item4 {
-    background-image:url('Images/summerresize.jpg');
+    background-image:url('Images/Header/summerresize.jpg');
     grid-area:1 / 4 / 2 / span 1;
 }
 
 .item5 {
-    background-image:url('Images/winterresize.jpg');
+    background-image:url('Images/Header/winterresize.jpg');
     grid-area:1 / 5 / 2 / span 1;
 }
 
@@ -223,6 +223,8 @@ body {
     color:white;
     font-weight:bold;
     outline:none;
+    position:relative;
+    z-index:3;
 }
 
 #searchlocation[placeholder] {

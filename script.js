@@ -64,6 +64,9 @@ if(navigator.onLine)
 
             switch(data.weather[0].description)
             {
+                case 'haze':
+                    searchlocationvideo.src = "Videos/haze.mp4";
+                    break;
                 case 'clear sky':
                     searchlocationvideo.src = "Videos/clear sky1.mp4";
                     break;
@@ -98,6 +101,9 @@ if(navigator.onLine)
 
                 case 'mist':
                     searchlocationvideo.src = "Videos/fog1.mp4";
+                    break;
+                case 'fog':
+                    searchlocationvideo.src = "Videos/fog.mp4";
                     break;
             }
 
