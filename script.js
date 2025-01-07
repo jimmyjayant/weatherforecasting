@@ -19,6 +19,11 @@ if(navigator.onLine)
     //let currentlocationdiv = document.getElementsByClassName("currentlocation")[0];
     let searchlocationvideo = document.getElementById("searchlocationvideo");
     let currentlocationvideo = document.getElementById("currentlocationvideo");
+    let searchedlocationdatatable = document.getElementById("searchlocdata");
+    let currentlocationtdatatable = document.getElementById("currentlocdata");
+    let curloctablecol = currentlocationtdatatable.getElementsByTagName("tr");
+    let searchloctablecol = searchedlocationdatatable.getElementsByTagName("tr");
+    
     let rgba = document.getElementsByClassName("rgba");
     let temperature1 = document.querySelector(".temp1");
     let summary1 = document.querySelector(".summary1");
@@ -30,7 +35,8 @@ if(navigator.onLine)
     let icon2 = document.querySelector(".icon2");
     const kelvin = 273;
 
-    function srcloc() {
+    function srcloc() 
+    {
         // API Id
         const api = "e1d3fbcd57d923d8c54b6ff2297d8b33";
 
@@ -71,7 +77,7 @@ if(navigator.onLine)
                     break;
 
                 case 'broken clouds':
-                    searchlocationvideo.src = "Videos/broken clouds";
+                    searchlocationvideo.src = "Videos/broken clouds.mp4";
                     break;
                 
                 case 'shower rain':
@@ -95,12 +101,61 @@ if(navigator.onLine)
                     break;
             }
 
-            loc1.textContent = data.name + "," + data.sys.country;
+            loc1.textContent = data.name + ", " + data.sys.country;
             let weathericon1 = data.weather[0].icon;
             let url1 = `https://openweathermap.org/img/wn/${weathericon1}.png`;
             icon1.innerHTML = `<img src='${url1}' style='width:clamp(2rem, 2rem + 2vw, 4.5rem);height:clamp(2rem, 2rem + 2vw, 4.5rem);'>`;
+            searchedlocationdatatable.style.display = "block";
+            searchloctablecol[0].childNodes[3].textContent = data.name;
+            searchloctablecol[1].childNodes[3].textContent = data.sys.country;
+            searchloctablecol[2].childNodes[3].textContent = data.weather[0].main;
+            searchloctablecol[3].childNodes[3].textContent = Math.floor(data.main.temp - kelvin) + "°C";
+            searchloctablecol[4].childNodes[3].textContent = data.main.pressure + " mb";
+            searchloctablecol[5].childNodes[3].textContent = data.main.humidity + " %";
+            searchloctablecol[6].childNodes[3].textContent = data.coord.lon;
+            searchloctablecol[7].childNodes[3].textContent = data.coord.lat;
+            searchloctablecol[8].childNodes[3].textContent = data.wind.speed + " km/h";
+            searchloctablecol[9].childNodes[3].textContent = data.wind.deg + " Deg";
+            searchloctablecol[10].childNodes[3].textContent = Math.floor(data.main.feels_like - kelvin) + "°C";
+            searchloctablecol[11].childNodes[3].textContent = Math.floor(data.main.temp_min - kelvin) + "°C";
+            searchloctablecol[12].childNodes[3].textContent = Math.floor(data.main.temp_max - kelvin) + "°C";
+            searchloctablecol[13].childNodes[3].textContent = data.main.sea_level + " m";
+            searchloctablecol[14].childNodes[3].textContent = data.main.grnd_level + " m";
+            let sunrisetimehours = new Date(data.sys.sunrise).getHours();
+            let sunrisetimemins = new Date(data.sys.sunrise).getMinutes();
+            let sunriseampm = "AM";
+            if(sunrisetimehours >= 12)
+            {
+                sunriseampm = "PM";
+            }
+            else
+            {
+                sunriseampm = "AM";
+            }
 
-        })
+            if(sunrisetimehours > 12)
+            {
+                sunrisetimehours = 24 - sunrisetimehours;
+            }
+            searchloctablecol[15].childNodes[3].textContent = sunrisetimehours + ":" + sunrisetimemins + sunriseampm;
+            let sunsettimehours = new Date(data.sys.sunset).getHours();
+            let sunsettimemins = new Date(data.sys.sunset).getMinutes();
+            let sunsetampm = "AM";
+            if(sunsettimehours >= 12)
+            {
+                sunsetampm = "PM";
+            }
+            else
+            {
+                sunsetampm = "AM";
+            }
+
+            if(sunsettimehours > 12)
+            {
+                sunrisetimehours = 24 - sunrisetimehours;
+            }
+            searchloctablecol[16].childNodes[3].textContent = sunsettimehours + ":" + sunsettimemins + sunsetampm;
+        });
     }
 
     function geoloc() 
@@ -174,10 +229,61 @@ if(navigator.onLine)
                             break;
                     }
 
-                    loc2.textContent = data.name + "," + data.sys.country;
+                    loc2.textContent = data.name + ", " + data.sys.country;
                     let weathericon2 = data.weather[0].icon;
                     let url2 = `https://openweathermap.org/img/wn/${weathericon2}.png`;
                     icon2.innerHTML = `<img src='${url2}' style='width:clamp(2rem, 2rem + 2vw, 4.5rem);height:clamp(2rem, 2rem + 2vw, 4.5rem);'>`;
+                    currentlocationtdatatable.style.display = "block";
+                    curloctablecol[0].childNodes[3].textContent = data.name;
+                    curloctablecol[1].childNodes[3].textContent = data.sys.country;
+                    curloctablecol[2].childNodes[3].textContent = data.weather[0].main;
+                    curloctablecol[3].childNodes[3].textContent = Math.floor(data.main.temp - kelvin) + "°C";
+                    curloctablecol[4].childNodes[3].textContent = data.main.pressure + " mb";
+                    curloctablecol[5].childNodes[3].textContent = data.main.humidity + " %";
+                    curloctablecol[6].childNodes[3].textContent = data.coord.lon;
+                    curloctablecol[7].childNodes[3].textContent = data.coord.lat;
+                    curloctablecol[8].childNodes[3].textContent = data.wind.speed + " km/h";
+                    curloctablecol[9].childNodes[3].textContent = data.wind.deg + " Deg";
+                    curloctablecol[10].childNodes[3].textContent = Math.floor(data.main.feels_like - kelvin) + "°C";
+                    curloctablecol[11].childNodes[3].textContent = Math.floor(data.main.temp_min - kelvin) + "°C";
+                    curloctablecol[12].childNodes[3].textContent = Math.floor(data.main.temp_max - kelvin) + "°C";
+                    curloctablecol[13].childNodes[3].textContent = data.main.sea_level + " m";
+                    curloctablecol[14].childNodes[3].textContent = data.main.grnd_level + " m";
+                    let sunrisetimehours = new Date(data.sys.sunrise).getHours();
+                    let sunrisetimemins = new Date(data.sys.sunrise).getMinutes();
+                    let sunriseampm = "AM";
+                    if(sunrisetimehours >= 12)
+                    {
+                        sunriseampm = "PM";
+                    }
+                    else
+                    {
+                        sunriseampm = "AM";
+                    }
+
+                    if(sunrisetimehours > 12)
+                    {
+                        sunrisetimehours = 24 - sunrisetimehours;
+                    }
+                    curloctablecol[15].childNodes[3].textContent = sunrisetimehours + ":" + sunrisetimemins + sunriseampm;
+                    let sunsettimehours = new Date(data.sys.sunset).getHours();
+                    let sunsettimemins = new Date(data.sys.sunset).getMinutes();
+                    let sunsetampm = "AM";
+                    if(sunsettimehours >= 12)
+                    {
+                        sunsetampm = "PM";
+                    }
+                    else
+                    {
+                        sunsetampm = "AM";
+                    }
+
+                    if(sunsettimehours > 12)
+                    {
+                        sunrisetimehours = 24 - sunrisetimehours;
+                    }
+                    curloctablecol[16].childNodes[3].textContent = sunsettimehours + ":" + sunsettimemins + sunsetampm;
+                    console.log(new Date(data.sys.sunset).getHours());
                 });
             });
         }
@@ -188,12 +294,12 @@ if(navigator.onLine)
     let inputarea = document.getElementById('searchlocation');
 
     inputarea.addEventListener("keydown", function(event) {
-        if(event.key === "Enter") {
-        event.preventDefault();
-        document.getElementById("searchbutton").click();
+        if(event.key === "Enter") 
+        {
+            event.preventDefault();
+            document.getElementById("searchbutton").click();
         }
     });
-
 }
 else
 {

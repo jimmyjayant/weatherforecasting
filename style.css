@@ -255,23 +255,30 @@ body {
 }
 
 #searchlocdata, #currentlocdata {
+    display:none;
     width:clamp(10rem, 10rem + 5vw, 20rem);
     margin-left:auto;
     margin-right:auto;
+    border:2px solid white;
+    margin-top:1rem;
+    margin-bottom:1rem;
+    padding:1rem;
     position:relative;
     z-index:3;
 }
 
-#searchlocdata, #currentlocdata {
-    /*display:none;*/
-    border:2px solid white;
-    margin-top:1rem;
-    margin-bottom:1rem;
-}
-
 #searchlocdata caption, #currentlocdata caption {
+    text-align:center;
     font-size:1.5rem;
     font-weight:normal;
+}
+
+#searchlocdata th, #currentlocdata th {
+    text-align:left;
+}
+
+#searchlocdata td, #currentlocdata td {
+    text-align:right;
 }
 
 .info1, .info2 {
