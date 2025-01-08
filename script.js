@@ -333,6 +333,7 @@ if(navigator.onLine)
             searchloctablecol[14].childNodes[3].textContent = data.main.grnd_level + " m";
             let sunrisetimehours = new Date(data.sys.sunrise).getHours();
             let sunrisetimemins = new Date(data.sys.sunrise).getMinutes();
+            /*
             let sunriseampm = "AM";
             if(sunrisetimehours >= 12)
             {
@@ -342,14 +343,16 @@ if(navigator.onLine)
             {
                 sunriseampm = "AM";
             }
-
+*/
             if(sunrisetimehours > 12)
             {
                 sunrisetimehours = 24 - sunrisetimehours;
             }
-            searchloctablecol[15].childNodes[3].textContent = sunrisetimehours + ":" + sunrisetimemins + sunriseampm;
+                
+            searchloctablecol[15].childNodes[3].textContent = sunrisetimehours + ":" + sunrisetimemins + " AM";
             let sunsettimehours = new Date(data.sys.sunset).getHours();
             let sunsettimemins = new Date(data.sys.sunset).getMinutes();
+            /*
             let sunsetampm = "AM";
             if(sunsettimehours >= 12)
             {
@@ -359,12 +362,12 @@ if(navigator.onLine)
             {
                 sunsetampm = "AM";
             }
-
+*/
             if(sunsettimehours > 12)
             {
                 sunrisetimehours = 24 - sunrisetimehours;
             }
-            searchloctablecol[16].childNodes[3].textContent = sunsettimehours + ":" + sunsettimemins + sunsetampm;
+            searchloctablecol[16].childNodes[3].textContent = sunsettimehours + ":" + sunsettimemins + " PM";
         });
     }
 
