@@ -35,31 +35,31 @@ body {
 }
 
 @-webkit-keyframes backgroundmarquee {
-    0% {background-image:url('Images/clear sky.jpg');}
-    10% {background-image:url('Images/cloudy.jpg');}
-    20% {background-image:url('Images/cloudy1.jpg');}
-    30% {background-image:url('Images/fog.jpg');}
-    40% {background-image:url('Images/heat.jpg');}
-    50% {background-image:url('Images/lightning.jpg');}
-    60% {background-image:url('Images/rainy.jpg');}
-    70% {background-image:url('Images/storm.jpg');}
-    80% {background-image:url('Images/summer.jpg');}
-    90% {background-image:url('Images/winter.jpg');}
-    100% {background-image:url('Images/clear sky.jpg');}
+    0% {background-image:url('Images/Weather/1k/clear sky.jpg');}
+    10% {background-image:url('Images/Weather/4k/cloudy.jpg');}
+    20% {background-image:url('Images/Weather/4k/cloudy1.jpg');}
+    30% {background-image:url('Images/Weather/4k/fog.jpg');}
+    40% {background-image:url('Images/Weather/800/heat.jpg');}
+    50% {background-image:url('Images/Weather/4k/lightning.jpg');}
+    60% {background-image:url('Images/Weather/4k/rainy.jpg');}
+    70% {background-image:url('Images/Weather/4k/storm.jpg');}
+    80% {background-image:url('Images/Weather/2k/summer.jpg');}
+    90% {background-image:url('Images/Weather/4k/winter.jpg');}
+    100% {background-image:url('Images/Weather/1k/clear sky.jpg');}
 }
 
 @keyframes backgroundmarquee {
-    0% {background-image:url('Images/clear sky.jpg');}
-    10% {background-image:url('Images/cloudy.jpg');}
-    20% {background-image:url('Images/cloudy1.jpg');}
-    30% {background-image:url('Images/fog.jpg');}
-    40% {background-image:url('Images/heat.jpg');}
-    50% {background-image:url('Images/lightning.jpg');}
-    60% {background-image:url('Images/rainy.jpg');}
-    70% {background-image:url('Images/storm.jpg');}
-    80% {background-image:url('Images/summer.jpg');}
-    90% {background-image:url('Images/winter.jpg');}
-    100% {background-image:url('Images/clear sky.jpg');}
+    0% {background-image:url('Images/Weather/1k/clear sky.jpg');}
+    10% {background-image:url('Images/Weather/4k/cloudy.jpg');}
+    20% {background-image:url('Images/Weather/4k/cloudy1.jpg');}
+    30% {background-image:url('Images/Weather/4k/fog.jpg');}
+    40% {background-image:url('Images/Weather/800/heat.jpg');}
+    50% {background-image:url('Images/Weather/4k/lightning.jpg');}
+    60% {background-image:url('Images/Weather/4k/rainy.jpg');}
+    70% {background-image:url('Images/Weather/4k/storm.jpg');}
+    80% {background-image:url('Images/Weather/2k/summer.jpg');}
+    90% {background-image:url('Images/Weather/4k/winter.jpg');}
+    100% {background-image:url('Images/Weather/1k/clear sky.jpg');}
 }
 
 .currentdatetime {
@@ -212,6 +212,7 @@ body {
     width:100%;
     position:relative;
     z-index:2;
+    margin-bottom:1rem;
 }
 
 #searchlocation {
@@ -347,15 +348,161 @@ body {
     background:rgba(0,0,0,0.3);
 }
 
+@media screen and (max-width:2560px) {
+    @-webkit-keyframes backgroundmarquee {
+        0% {background-image:url('Images/Weather/1k/clear sky.jpg');}
+        10% {background-image:url('Images/Weather/2k/cloudy.jpg');}
+        20% {background-image:url('Images/Weather/2k/cloudy1.jpg');}
+        30% {background-image:url('Images/Weather/2k/fog.jpg');}
+        40% {background-image:url('Images/Weather/800/heat.jpg');}
+        50% {background-image:url('Images/Weather/2k/lightning.jpg');}
+        60% {background-image:url('Images/Weather/2k/rainy.jpg');}
+        70% {background-image:url('Images/Weather/2k/storm.jpg');}
+        80% {background-image:url('Images/Weather/2k/summer.jpg');}
+        90% {background-image:url('Images/Weather/2k/winter.jpg');}
+        100% {background-image:url('Images/Weather/1k/clear sky.jpg');}
+    }
+
+    @keyframes backgroundmarquee {
+        0% {background-image:url('Images/Weather/1k/clear sky.jpg');}
+        10% {background-image:url('Images/Weather/2k/cloudy.jpg');}
+        20% {background-image:url('Images/Weather/2k/cloudy1.jpg');}
+        30% {background-image:url('Images/Weather/2k/fog.jpg');}
+        40% {background-image:url('Images/Weather/800/heat.jpg');}
+        50% {background-image:url('Images/Weather/2k/lightning.jpg');}
+        60% {background-image:url('Images/Weather/2k/rainy.jpg');}
+        70% {background-image:url('Images/Weather/2k/storm.jpg');}
+        80% {background-image:url('Images/Weather/2k/summer.jpg');}
+        90% {background-image:url('Images/Weather/2k/winter.jpg');}
+        100% {background-image:url('Images/Weather/1k/clear sky.jpg');}
+    }
+}
+
+@media screen and (max-width:1920px) {
+    @-webkit-keyframes backgroundmarquee {
+        0% {background-image:url('Images/Weather/1k/clear sky.jpg');}
+        10% {background-image:url('Images/Weather/1k/cloudy.jpg');}
+        20% {background-image:url('Images/Weather/1k/cloudy1.jpg');}
+        30% {background-image:url('Images/Weather/1k/fog.jpg');}
+        40% {background-image:url('Images/Weather/800/heat.jpg');}
+        50% {background-image:url('Images/Weather/1k/lightning.jpg');}
+        60% {background-image:url('Images/Weather/1k/rainy.jpg');}
+        70% {background-image:url('Images/Weather/1k/storm.jpg');}
+        80% {background-image:url('Images/Weather/1k/summer.jpg');}
+        90% {background-image:url('Images/Weather/1k/winter.jpg');}
+        100% {background-image:url('Images/Weather/1k/clear sky.jpg');}
+    }
+
+    @keyframes backgroundmarquee {
+        0% {background-image:url('Images/Weather/1k/clear sky.jpg');}
+        10% {background-image:url('Images/Weather/1k/cloudy.jpg');}
+        20% {background-image:url('Images/Weather/1k/cloudy1.jpg');}
+        30% {background-image:url('Images/Weather/1k/fog.jpg');}
+        40% {background-image:url('Images/Weather/800/heat.jpg');}
+        50% {background-image:url('Images/Weather/1k/lightning.jpg');}
+        60% {background-image:url('Images/Weather/1k/rainy.jpg');}
+        70% {background-image:url('Images/Weather/1k/storm.jpg');}
+        80% {background-image:url('Images/Weather/1k/summer.jpg');}
+        90% {background-image:url('Images/Weather/1k/winter.jpg');}
+        100% {background-image:url('Images/Weather/1k/clear sky.jpg');}
+    }
+}
+
+@media screen and (max-width:1280px) {
+    @-webkit-keyframes backgroundmarquee {
+        0% {background-image:url('Images/Weather/1280/clear sky.jpg');}
+        10% {background-image:url('Images/Weather/1280/cloudy.jpg');}
+        20% {background-image:url('Images/Weather/1280/cloudy1.jpg');}
+        30% {background-image:url('Images/Weather/1280/fog.jpg');}
+        40% {background-image:url('Images/Weather/800/heat.jpg');}
+        50% {background-image:url('Images/Weather/1280/lightning.jpg');}
+        60% {background-image:url('Images/Weather/1280/rainy.jpg');}
+        70% {background-image:url('Images/Weather/1280/storm.jpg');}
+        80% {background-image:url('Images/Weather/1280/summer.jpg');}
+        90% {background-image:url('Images/Weather/1280/winter.jpg');}
+        100% {background-image:url('Images/Weather/1280/clear sky.jpg');}
+    }
+
+    @keyframes backgroundmarquee {
+        0% {background-image:url('Images/Weather/1280/clear sky.jpg');}
+        10% {background-image:url('Images/Weather/1280/cloudy.jpg');}
+        20% {background-image:url('Images/Weather/1280/cloudy1.jpg');}
+        30% {background-image:url('Images/Weather/1280/fog.jpg');}
+        40% {background-image:url('Images/Weather/800/heat.jpg');}
+        50% {background-image:url('Images/Weather/1280/lightning.jpg');}
+        60% {background-image:url('Images/Weather/1280/rainy.jpg');}
+        70% {background-image:url('Images/Weather/1280/storm.jpg');}
+        80% {background-image:url('Images/Weather/1280/summer.jpg');}
+        90% {background-image:url('Images/Weather/1280/winter.jpg');}
+        100% {background-image:url('Images/Weather/1280/clear sky.jpg');}
+    }
+}
+
 @media screen and (max-width:800px) {
     html {
         font-size:14px;
+    }
+
+    @-webkit-keyframes backgroundmarquee {
+        0% {background-image:url('Images/Weather/800/clear sky.jpg');}
+        10% {background-image:url('Images/Weather/800/cloudy.jpg');}
+        20% {background-image:url('Images/Weather/800/cloudy1.jpg');}
+        30% {background-image:url('Images/Weather/800/fog.jpg');}
+        40% {background-image:url('Images/Weather/800/heat.jpg');}
+        50% {background-image:url('Images/Weather/800/lightning.jpg');}
+        60% {background-image:url('Images/Weather/800/rainy.jpg');}
+        70% {background-image:url('Images/Weather/800/storm.jpg');}
+        80% {background-image:url('Images/Weather/800/summer.jpg');}
+        90% {background-image:url('Images/Weather/800/winter.jpg');}
+        100% {background-image:url('Images/Weather/800/clear sky.jpg');}
+    }
+
+    @keyframes backgroundmarquee {
+        0% {background-image:url('Images/Weather/800/clear sky.jpg');}
+        10% {background-image:url('Images/Weather/800/cloudy.jpg');}
+        20% {background-image:url('Images/Weather/800/cloudy1.jpg');}
+        30% {background-image:url('Images/Weather/800/fog.jpg');}
+        40% {background-image:url('Images/Weather/800/heat.jpg');}
+        50% {background-image:url('Images/Weather/800/lightning.jpg');}
+        60% {background-image:url('Images/Weather/800/rainy.jpg');}
+        70% {background-image:url('Images/Weather/800/storm.jpg');}
+        80% {background-image:url('Images/Weather/800/summer.jpg');}
+        90% {background-image:url('Images/Weather/800/winter.jpg');}
+        100% {background-image:url('Images/Weather/800/clear sky.jpg');}
     }
 }
 
 @media screen and (max-width:600px) {
     html {
         font-size:12px;
+    }
+
+    @-webkit-keyframes backgroundmarquee {
+        0% {background-image:url('Images/Weather/600/clear sky.jpg');}
+        10% {background-image:url('Images/Weather/600/cloudy.jpg');}
+        20% {background-image:url('Images/Weather/600/cloudy1.jpg');}
+        30% {background-image:url('Images/Weather/600/fog.jpg');}
+        40% {background-image:url('Images/Weather/800/heat.jpg');}
+        50% {background-image:url('Images/Weather/600/lightning.jpg');}
+        60% {background-image:url('Images/Weather/600/rainy.jpg');}
+        70% {background-image:url('Images/Weather/600/storm.jpg');}
+        80% {background-image:url('Images/Weather/600/summer.jpg');}
+        90% {background-image:url('Images/Weather/600/winter.jpg');}
+        100% {background-image:url('Images/Weather/600/clear sky.jpg');}
+    }
+
+    @keyframes backgroundmarquee {
+        0% {background-image:url('Images/Weather/600/clear sky.jpg');}
+        10% {background-image:url('Images/Weather/600/cloudy.jpg');}
+        20% {background-image:url('Images/Weather/600/cloudy1.jpg');}
+        30% {background-image:url('Images/Weather/600/fog.jpg');}
+        40% {background-image:url('Images/Weather/800/heat.jpg');}
+        50% {background-image:url('Images/Weather/600/lightning.jpg');}
+        60% {background-image:url('Images/Weather/600/rainy.jpg');}
+        70% {background-image:url('Images/Weather/600/storm.jpg');}
+        80% {background-image:url('Images/Weather/600/summer.jpg');}
+        90% {background-image:url('Images/Weather/600/winter.jpg');}
+        100% {background-image:url('Images/Weather/600/clear sky.jpg');}
     }
 }
 

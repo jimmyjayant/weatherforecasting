@@ -16,7 +16,6 @@ if(navigator.onLine)
 
     let infodiv1 = document.getElementsByClassName("info1")[0];
     let infodiv2 = document.getElementsByClassName("info2")[0];
-    //let currentlocationdiv = document.getElementsByClassName("currentlocation")[0];
     let searchlocationvideo = document.getElementById("searchlocationvideo");
     let currentlocationvideo = document.getElementById("currentlocationvideo");
     let searchedlocationdatatable = document.getElementById("searchlocdata");
@@ -65,45 +64,250 @@ if(navigator.onLine)
             switch(data.weather[0].description)
             {
                 case 'haze':
-                    searchlocationvideo.src = "Videos/haze.mp4";
+                    switch(true)
+                    {
+                        case (window.innerWidth <= 600):
+                            searchlocationvideo.src = "Videos/600/haze.mp4";
+                            break;
+
+                        case (window.innerWidth <= 800):
+                            searchlocationvideo.src = "Videos/800/haze.mp4";
+                            break;
+
+                        case (window.innerWidth <= 1280):
+                            searchlocationvideo.src = "Videos/1280/haze.mp4";
+                            break;
+
+                        case (window.innerWidth <= 1920):
+                            searchlocationvideo.src = "Videos/1k/haze.mp4";
+                            break;
+
+                        case (window.innerWidth <= 2560):
+                            searchlocationvideo.src = "Videos/2k/haze.mp4";
+                            break;
+
+                        case (window.innerWidth > 2560):
+                            searchlocationvideo.src = "Videos/4k/haze.mp4";
+                            break;
+                    }
                     break;
+
                 case 'clear sky':
-                    searchlocationvideo.src = "Videos/clear sky1.mp4";
+                    switch(true)
+                    {
+                        case (window.innerWidth <= 600):
+                            searchlocationvideo.src = "Videos/600/clear sky1.mp4";
+                            break;
+
+                        case (window.innerWidth <= 800):
+                            searchlocationvideo.src = "Videos/800/clear sky1.mp4";
+                            break;
+
+                        case (window.innerWidth <= 1280):
+                            searchlocationvideo.src = "Videos/1280/clear sky1.mp4";
+                            break;
+
+                        case (window.innerWidth > 1280):
+                            searchlocationvideo.src = "Videos/1k/clear sky1.mp4";
+                            break;
+                    }
                     break;
 
                 case 'few clouds':
-                    searchlocationvideo.src = "Videos/cloudy.mp4";
+                    switch(true)
+                    {
+                        case (window.innerWidth <= 600):
+                            searchlocationvideo.src = "Videos/600/cloudy.mp4";
+                            break;
+
+                        case (window.innerWidth <= 800):
+                            searchlocationvideo.src = "Videos/800/cloudy.mp4";
+                            break;
+
+                        case (window.innerWidth > 800):
+                            searchlocationvideo.src = "Videos/1280/cloudy.mp4";
+                            break;
+                    }
                     break;
 
                 case 'scattered clouds':
-                    searchlocationvideo.src = "Videos/scattered clouds.mp4";
+                    switch(true)
+                    {
+                        case (window.innerWidth <= 600):
+                            searchlocationvideo.src = "Videos/600/scattered clouds.mp4";
+                            break;
+
+                        case (window.innerWidth <= 800):
+                            searchlocationvideo.src = "Videos/800/scattered clouds.mp4";
+                            break;
+
+                        case (window.innerWidth <= 1280):
+                            searchlocationvideo.src = "Videos/1280/scattered clouds.mp4";
+                            break;
+
+                        case (window.innerWidth > 1280):
+                            searchlocationvideo.src = "Videos/1k/scattered clouds.mp4";
+                            break;
+                    }
                     break;
 
                 case 'broken clouds':
-                    searchlocationvideo.src = "Videos/broken clouds.mp4";
+                    switch(true)
+                    {
+                        case (window.innerWidth <= 600):
+                            searchlocationvideo.src = "Videos/600/broken clouds.mp4";
+                            break;
+
+                        case (window.innerWidth <= 800):
+                            searchlocationvideo.src = "Videos/800/broken clouds.mp4";
+                            break;
+
+                        case (window.innerWidth <= 1280):
+                            searchlocationvideo.src = "Videos/1280/broken clouds.mp4";
+                            break;
+
+                        case (window.innerWidth > 1280):
+                            searchlocationvideo.src = "Videos/1k/broken clouds.mp4";
+                            break;
+                    }
                     break;
                 
                 case 'shower rain':
-                    searchlocationvideo.src = "Videos/shower rain.mp4";
+                    switch(true)
+                    {
+                        case (window.innerWidth <= 600):
+                            searchlocationvideo.src = "Videos/600/shower rain.mp4";
+                            break;
+
+                        case (window.innerWidth <= 800):
+                            searchlocationvideo.src = "Videos/800/shower rain.mp4";
+                            break;
+
+                        case (window.innerWidth <= 1280):
+                            searchlocationvideo.src = "Videos/1280/shower rain.mp4";
+                            break;
+
+                        case (window.innerWidth <= 1920):
+                            searchlocationvideo.src = "Videos/1k/shower rain.mp4";
+                            break;
+
+                        case (window.innerWidth <= 2560):
+                            searchlocationvideo.src = "Videos/2k/shower rain.mp4";
+                            break;
+
+                        case (window.innerWidth > 2560):
+                            searchlocationvideo.src = "Videos/4k/shower rain.mp4";
+                            break;
+                    }
                     break;
 
                 case 'rain':
-                    searchlocationvideo.src = "Videos/rainy.mp4";
+                    switch(true)
+                    {
+                        case (window.innerWidth <= 600):
+                            searchlocationvideo.src = "Videos/600/rainy.mp4";
+                            break;
+
+                        case (window.innerWidth <= 800):
+                            searchlocationvideo.src = "Videos/800/rainy.mp4";
+                            break;
+
+                        case (window.innerWidth <= 1280):
+                            searchlocationvideo.src = "Videos/1280/rainy.mp4";
+                            break;
+
+                        case (window.innerWidth <= 1920):
+                            searchlocationvideo.src = "Videos/1k/rainy.mp4";
+                            break;
+
+                        case (window.innerWidth <= 2560):
+                            searchlocationvideo.src = "Videos/2k/rainy.mp4";
+                            break;
+
+                        case (window.innerWidth > 2560):
+                            searchlocationvideo.src = "Videos/4k/rainy.mp4";
+                            break;
+                    }
                     break;
 
                 case 'thunderstorm':
-                    searchlocationvideo.src = "Videos/storm.mp4";
+                    switch(true)
+                    {
+                        case (window.innerWidth <= 600):
+                            searchlocationvideo.src = "Videos/600/storm.mp4";
+                            break;
+
+                        case (window.innerWidth <= 800):
+                            searchlocationvideo.src = "Videos/800/storm.mp4";
+                            break;
+
+                        case (window.innerWidth <= 1280):
+                            searchlocationvideo.src = "Videos/1280/storm.mp4";
+                            break;
+
+                        case (window.innerWidth > 1280):
+                            searchlocationvideo.src = "Videos/1k/storm.mp4";
+                            break;
+                    }
                     break;
 
                 case 'snow':
-                    searchlocationvideo.src = "Videos/winter.mp4";
+                    switch(true)
+                    {
+                        case (window.innerWidth <= 600):
+                            searchlocationvideo.src = "Videos/600/winter.mp4";
+                            break;
+
+                        case (window.innerWidth <= 800):
+                            searchlocationvideo.src = "Videos/800/winter.mp4";
+                            break;
+
+                        case (window.innerWidth <= 1280):
+                            searchlocationvideo.src = "Videos/1280/winter.mp4";
+                            break;
+
+                        case (window.innerWidth > 1280):
+                            searchlocationvideo.src = "Videos/1k/winter.mp4";
+                            break;
+                    }
                     break;
 
                 case 'mist':
-                    searchlocationvideo.src = "Videos/fog1.mp4";
+                    switch(true)
+                    {
+                        case (window.innerWidth <= 600):
+                            searchlocationvideo.src = "Videos/600/fog1.mp4";
+                            break;
+
+                        case (window.innerWidth <= 800):
+                            searchlocationvideo.src = "Videos/800/fog1.mp4";
+                            break;
+
+                        case (window.innerWidth <= 1280):
+                            searchlocationvideo.src = "Videos/1280/fog1.mp4";
+                            break;
+
+                        case (window.innerWidth > 1280):
+                            searchlocationvideo.src = "Videos/1k/fog1.mp4";
+                            break;
+                    }
                     break;
+
                 case 'fog':
-                    searchlocationvideo.src = "Videos/fog.mp4";
+                    switch(true)
+                    {
+                        case (window.innerWidth <= 600):
+                            searchlocationvideo.src = "Videos/600/fog.mp4";
+                            break;
+
+                        case (window.innerWidth <= 800):
+                            searchlocationvideo.src = "Videos/800/fog.mp4";
+                            break;
+
+                        case (window.innerWidth > 800):
+                            searchlocationvideo.src = "Videos/1280/fog.mp4";
+                            break;
+                    }
                     break;
             }
 
@@ -198,40 +402,251 @@ if(navigator.onLine)
 
                     switch(data.weather[0].description)
                     {
+                        case 'haze':
+                            switch(true)
+                            {
+                                case (window.innerWidth <= 600):
+                                    currentlocationvideo.src = "Videos/600/haze.mp4";
+                                    break;
+
+                                case (window.innerWidth <= 800):
+                                    currentlocationvideo.src = "Videos/800/haze.mp4";
+                                    break;
+
+                                case (window.innerWidth <= 1280):
+                                    currentlocationvideo.src = "Videos/1280/haze.mp4";
+                                    break;
+
+                                case (window.innerWidth <= 1920):
+                                    currentlocationvideo.src = "Videos/1k/haze.mp4";
+                                    break;
+
+                                case (window.innerWidth <= 2560):
+                                    currentlocationvideo.src = "Videos/2k/haze.mp4";
+                                    break;
+
+                                case (window.innerWidth > 2560):
+                                    currentlocationvideo.src = "Videos/4k/haze.mp4";
+                                    break;
+                            }
+                            break;
+
                         case 'clear sky':
-                            currentlocationvideo.src = "Videos/clear sky1.mp4";
+                            switch(true)
+                            {
+                                case (window.innerWidth <= 600):
+                                    currentlocationvideo.src = "Videos/600/clear sky1.mp4";
+                                    break;
+
+                                case (window.innerWidth <= 800):
+                                    currentlocationvideo.src = "Videos/800/clear sky1.mp4";
+                                    break;
+
+                                case (window.innerWidth <= 1280):
+                                    currentlocationvideo.src = "Videos/1280/clear sky1.mp4";
+                                    break;
+
+                                case (window.innerWidth > 1280):
+                                    currentlocationvideo.src = "Videos/1k/clear sky1.mp4";
+                                    break;
+                            }
                             break;
 
                         case 'few clouds':
-                            currentlocationvideo.src = "Videos/cloudy.mp4";
+                            switch(true)
+                            {
+                                case (window.innerWidth <= 600):
+                                    currentlocationvideo.src = "Videos/600/cloudy.mp4";
+                                    break;
+
+                                case (window.innerWidth <= 800):
+                                    currentlocationvideo.src = "Videos/800/cloudy.mp4";
+                                    break;
+
+                                case (window.innerWidth > 800):
+                                    currentlocationvideo.src = "Videos/1280/cloudy.mp4";
+                                    break;
+                            }
                             break;
 
                         case 'scattered clouds':
-                            currentlocationvideo.src = "Videos/scattered clouds.mp4";
+                            switch(true)
+                            {
+                                case (window.innerWidth <= 600):
+                                    currentlocationvideo.src = "Videos/600/scattered clouds.mp4";
+                                    break;
+
+                                case (window.innerWidth <= 800):
+                                    currentlocationvideo.src = "Videos/800/scattered clouds.mp4";
+                                    break;
+
+                                case (window.innerWidth <= 1280):
+                                    currentlocationvideo.src = "Videos/1280/scattered clouds.mp4";
+                                    break;
+
+                                case (window.innerWidth > 1280):
+                                    currentlocationvideo.src = "Videos/1k/scattered clouds.mp4";
+                                    break;
+                            }
                             break;
 
                         case 'broken clouds':
-                            currentlocationvideo.src = "Videos/broken clouds";
+                            switch(true)
+                            {
+                                case (window.innerWidth <= 600):
+                                    currentlocationvideo.src = "Videos/600/broken clouds.mp4";
+                                    break;
+
+                                case (window.innerWidth <= 800):
+                                    currentlocationvideo.src = "Videos/800/broken clouds.mp4";
+                                    break;
+
+                                case (window.innerWidth <= 1280):
+                                    currentlocationvideo.src = "Videos/1280/broken clouds.mp4";
+                                    break;
+
+                                case (window.innerWidth > 1280):
+                                    currentlocationvideo.src = "Videos/1k/broken clouds.mp4";
+                                    break;
+                            }
                             break;
                         
                         case 'shower rain':
-                            currentlocationvideo.src = "Videos/shower rain.mp4";
+                            switch(true)
+                            {
+                                case (window.innerWidth <= 600):
+                                    currentlocationvideo.src = "Videos/600/shower rain.mp4";
+                                    break;
+
+                                case (window.innerWidth <= 800):
+                                    currentlocationvideo.src = "Videos/800/shower rain.mp4";
+                                    break;
+
+                                case (window.innerWidth <= 1280):
+                                    currentlocationvideo.src = "Videos/1280/shower rain.mp4";
+                                    break;
+
+                                case (window.innerWidth <= 1920):
+                                    currentlocationvideo.src = "Videos/1k/shower rain.mp4";
+                                    break;
+
+                                case (window.innerWidth <= 2560):
+                                    currentlocationvideo.src = "Videos/2k/shower rain.mp4";
+                                    break;
+
+                                case (window.innerWidth > 2560):
+                                    currentlocationvideo.src = "Videos/4k/shower rain.mp4";
+                                    break;
+                            }
                             break;
 
                         case 'rain':
-                            currentlocationvideo.src = "Videos/rainy.mp4";
+                            switch(true)
+                            {
+                                case (window.innerWidth <= 600):
+                                    currentlocationvideo.src = "Videos/600/rainy.mp4";
+                                    break;
+
+                                case (window.innerWidth <= 800):
+                                    currentlocationvideo.src = "Videos/800/rainy.mp4";
+                                    break;
+
+                                case (window.innerWidth <= 1280):
+                                    currentlocationvideo.src = "Videos/1280/rainy.mp4";
+                                    break;
+
+                                case (window.innerWidth <= 1920):
+                                    currentlocationvideo.src = "Videos/1k/rainy.mp4";
+                                    break;
+
+                                case (window.innerWidth <= 2560):
+                                    currentlocationvideo.src = "Videos/2k/rainy.mp4";
+                                    break;
+
+                                case (window.innerWidth > 2560):
+                                    currentlocationvideo.src = "Videos/4k/rainy.mp4";
+                                    break;
+                            }
                             break;
 
                         case 'thunderstorm':
-                            currentlocationvideo.src = "Videos/storm.mp4";
+                            switch(true)
+                            {
+                                case (window.innerWidth <= 600):
+                                    currentlocationvideo.src = "Videos/600/storm.mp4";
+                                    break;
+
+                                case (window.innerWidth <= 800):
+                                    currentlocationvideo.src = "Videos/800/storm.mp4";
+                                    break;
+
+                                case (window.innerWidth <= 1280):
+                                    currentlocationvideo.src = "Videos/1280/storm.mp4";
+                                    break;
+
+                                case (window.innerWidth > 1280):
+                                    currentlocationvideo.src = "Videos/1k/storm.mp4";
+                                    break;
+                            }
                             break;
 
                         case 'snow':
-                            currentlocationvideo.src = "Videos/winter.mp4";
+                            switch(true)
+                            {
+                                case (window.innerWidth <= 600):
+                                    currentlocationvideo.src = "Videos/600/winter.mp4";
+                                    break;
+
+                                case (window.innerWidth <= 800):
+                                    currentlocationvideo.src = "Videos/800/winter.mp4";
+                                    break;
+
+                                case (window.innerWidth <= 1280):
+                                    currentlocationvideo.src = "Videos/1280/winter.mp4";
+                                    break;
+
+                                case (window.innerWidth > 1280):
+                                    currentlocationvideo.src = "Videos/1k/winter.mp4";
+                                    break;
+                            }
                             break;
 
                         case 'mist':
-                            currentlocationvideo.src = "Videos/fog1.mp4";
+                            switch(true)
+                            {
+                                case (window.innerWidth <= 600):
+                                    currentlocationvideo.src = "Videos/600/fog1.mp4";
+                                    break;
+
+                                case (window.innerWidth <= 800):
+                                    currentlocationvideo.src = "Videos/800/fog1.mp4";
+                                    break;
+
+                                case (window.innerWidth <= 1280):
+                                    currentlocationvideo.src = "Videos/1280/fog1.mp4";
+                                    break;
+
+                                case (window.innerWidth > 1280):
+                                    currentlocationvideo.src = "Videos/1k/fog1.mp4";
+                                    break;
+                            }
+                            break;
+
+                        case 'fog':
+                            switch(true)
+                            {
+                                case (window.innerWidth <= 600):
+                                    currentlocationvideo.src = "Videos/600/fog.mp4";
+                                    break;
+
+                                case (window.innerWidth <= 800):
+                                    currentlocationvideo.src = "Videos/800/fog.mp4";
+                                    break;
+
+                                case (window.innerWidth > 800):
+                                    currentlocationvideo.src = "Videos/1280/fog.mp4";
+                                    break;
+                            }
                             break;
                     }
 
