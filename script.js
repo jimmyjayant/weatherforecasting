@@ -304,7 +304,7 @@ function fetchandshowweatherdata(base, infodiv, temperature, summary, rgba, vide
         if(data)
         {
             infodiv.style.display = "flex";
-            temperature.innerHTML = Math.floor(data.main.temp) + "°C";                
+            temperature.innerHTML = Math.floor(data.main.temp - kelvin) + "°C";                
             summary.textContent = data.weather[0].description;
             rgba.style.display = "block";
             videoelement.style.display = "block";
