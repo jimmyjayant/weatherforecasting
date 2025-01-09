@@ -210,13 +210,21 @@ body {
     flex-wrap:nowrap;
     justify-content:center;
     align-items:center;
+    gap:5px;
     width:100%;
     position:relative;
     z-index:2;
     margin-bottom:1rem;
 }
 
+.error {
+    display:none;
+    color:red;
+    font-size:2rem;
+}
+
 #searchlocation {
+    width:clamp(10rem, 10rem + 10vw, 20rem);
     border:none;
     border-bottom:2px solid white;
     background:transparent;
@@ -237,17 +245,16 @@ body {
 #searchlocation:focus {
     border:none;
     border-bottom:2px solid white;
+    background-color:lightblue;
 }
 
 #searchbutton {
-    width:4rem;
-    height:4rem;
-    overflow:hidden;
-    margin-left:5px;
+    width:clamp(2rem, 3rem, 4rem);
     background-color:white;
     border:none;
-    flex-shrink:0;
     padding:0;
+    cursor:pointer;
+    flex-shrink:0;
 }
 
 #searchbutton:hover {

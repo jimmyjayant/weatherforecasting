@@ -277,7 +277,7 @@ let searchedlocationdatatable = document.getElementById("searchlocdata");
 let currentlocationdatatable = document.getElementById("currentlocdata");
 let curloctablecol = currentlocationdatatable.getElementsByTagName("tr");
 let searchloctablecol = searchedlocationdatatable.getElementsByTagName("tr");
-
+let errordiv = document.getElementsByClassName("error")[0];
 let rgba = document.getElementsByClassName("rgba");
 let temperature1 = document.querySelector(".temp1");
 let summary1 = document.querySelector(".summary1");
@@ -297,6 +297,9 @@ function fetchandshowweatherdata(base, infodiv, temperature, summary, rgba, vide
     // Calling the API
     fetch(base)
     .then((response) => {
+        if(!response.ok) {
+            throw "City Not Found!";
+        }
         return response.json();
     })
     .then((data) => {
@@ -353,6 +356,12 @@ function fetchandshowweatherdata(base, infodiv, temperature, summary, rgba, vide
             
             moreinfotablecols[16].childNodes[3].textContent = sunsettimehours + ":" + sunsettimemins + " PM";
         }
+    })
+    .catch((error) => {
+        
+        errordiv.style.display = "block";
+        errordiv.innerText = error;
+        // error message
     });
 }
 
@@ -363,6 +372,8 @@ if(navigator.onLine)
 
     function srcloc() 
     {
+        errordiv.style.display = "";
+        
         // location
         var locationValue = document.getElementById('searchlocation').value;
 
@@ -406,6 +417,7 @@ if(navigator.onLine)
         if(event.key === "Enter") 
         {
             event.preventDefault();
+            errordiv.style.display = "";
             document.getElementById("searchbutton").click();
         }
     });
