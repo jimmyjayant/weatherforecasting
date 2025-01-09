@@ -115,7 +115,8 @@ body {
     color:white;
     /*-webkit-background-clip:text;
     background-clip:text;
-    -webkit-text-fill-color:transparent;*/
+    -webkit-text-fill-color:transparent;
+    text-fill-color:transparent;*/
 }
 
 .header > div:not(:nth-of-type(6), :nth-of-type(7)) {
@@ -259,7 +260,7 @@ body {
 
 #searchlocdata, #currentlocdata {
     display:none;
-    width:clamp(10rem, 10rem + 5vw, 20rem);
+    width:fit-content;
     margin-left:auto;
     margin-right:auto;
     border:2px solid white;

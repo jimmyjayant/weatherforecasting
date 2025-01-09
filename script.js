@@ -292,7 +292,7 @@ const kelvin = 273;
 // API Id
 const api = "e1d3fbcd57d923d8c54b6ff2297d8b33";
 
-function fetchandshowweatherdata(base, infodiv, temperature, summary, rgba, videoelement, location, icon, datatable, moreinfotablecols, isKelvin)
+function fetchandshowweatherdata(base, infodiv, temperature, summary, rgba, videoelement, location, icon, datatable, moreinfotablecols)
 {
     // Calling the API
     fetch(base)
@@ -304,14 +304,8 @@ function fetchandshowweatherdata(base, infodiv, temperature, summary, rgba, vide
         if(data)
         {
             infodiv.style.display = "flex";
-            if(isKelvin == true)
-            {
-                temperature.innerHTML = Math.floor(data.main.temp - kelvin) + "°C";
-            }
-            else
-            {
-                temperature.innerHTML = Math.floor(data.main.temp) + "°C";
-            }
+
+            temperature.innerHTML = Math.floor(data.main.temp) + "°C";
                             
             summary.textContent = data.weather[0].description;
             rgba.style.display = "block";
@@ -329,14 +323,8 @@ function fetchandshowweatherdata(base, infodiv, temperature, summary, rgba, vide
             moreinfotablecols[0].childNodes[3].textContent = data.name;
             moreinfotablecols[1].childNodes[3].textContent = data.sys.country;
             moreinfotablecols[2].childNodes[3].textContent = data.weather[0].main;
-            if(isKelvin == true)
-            {
-                moreinfotablecols[3].childNodes[3].textContent = Math.floor(data.main.temp - kelvin) + "°C";
-            }
-            else
-            {
-                moreinfotablecols[3].childNodes[3].textContent = Math.floor(data.main.temp) + "°C";
-            }
+
+            moreinfotablecols[3].childNodes[3].textContent = Math.floor(data.main.temp) + "°C";
             
             moreinfotablecols[4].childNodes[3].textContent = data.main.pressure + " mb";
             moreinfotablecols[5].childNodes[3].textContent = data.main.humidity + " %";
@@ -344,19 +332,11 @@ function fetchandshowweatherdata(base, infodiv, temperature, summary, rgba, vide
             moreinfotablecols[7].childNodes[3].textContent = data.coord.lat;
             moreinfotablecols[8].childNodes[3].textContent = data.wind.speed + " km/h";
             moreinfotablecols[9].childNodes[3].textContent = data.wind.deg + " Deg";
-            if(isKelvin == true)
-            {
-                moreinfotablecols[10].childNodes[3].textContent = Math.floor(data.main.feels_like - kelvin) + "°C";
-                moreinfotablecols[11].childNodes[3].textContent = Math.floor(data.main.temp_min - kelvin) + "°C";
-                moreinfotablecols[12].childNodes[3].textContent = Math.floor(data.main.temp_max - kelvin) + "°C";
-            }
-            else
-            {
-                moreinfotablecols[10].childNodes[3].textContent = Math.floor(data.main.feels_like) + "°C";
-                moreinfotablecols[11].childNodes[3].textContent = Math.floor(data.main.temp_min) + "°C";
-                moreinfotablecols[12].childNodes[3].textContent = Math.floor(data.main.temp_max) + "°C";
-            }
-            
+
+            moreinfotablecols[10].childNodes[3].textContent = Math.floor(data.main.feels_like) + "°C";
+            moreinfotablecols[11].childNodes[3].textContent = Math.floor(data.main.temp_min) + "°C";
+            moreinfotablecols[12].childNodes[3].textContent = Math.floor(data.main.temp_max) + "°C";
+
             moreinfotablecols[13].childNodes[3].textContent = data.main.sea_level + " m";
             moreinfotablecols[14].childNodes[3].textContent = data.main.grnd_level + " m";
             let sunrisetimehours = new Date(data.sys.sunrise).getHours();
@@ -392,8 +372,7 @@ if(navigator.onLine)
 
         fetchandshowweatherdata(base1, infodiv1, temperature1, summary1,
              rgba[0], searchlocationvideo,  loc1, icon1,
-              searchedlocationdatatable, searchloctablecol, false
-        );
+              searchedlocationdatatable, searchloctablecol);
     }
 
     function geoloc() 
@@ -409,11 +388,11 @@ if(navigator.onLine)
                 // API URL
                 var base2 = 
                 `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&` + `lon=${lon}&` + 
-                `appid=${api}`;
+                `appid=${api}&units=metric`;
 
                 fetchandshowweatherdata(base2, infodiv2, temperature2, summary2,
                     rgba[1], currentlocationvideo,  loc2, icon2,
-                     currentlocationdatatable, curloctablecol, true
+                     currentlocationdatatable, curloctablecol
                );
             });
         }
