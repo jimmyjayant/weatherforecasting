@@ -277,7 +277,8 @@ let searchedlocationdatatable = document.getElementById("searchlocdata");
 let currentlocationdatatable = document.getElementById("currentlocdata");
 let curloctablecol = currentlocationdatatable.getElementsByTagName("tr");
 let searchloctablecol = searchedlocationdatatable.getElementsByTagName("tr");
-let errordiv = document.getElementsByClassName("error")[0];
+let errordiv1 = document.getElementsByClassName("error")[0];
+let errordiv2 = document.getElementsByClassName("error")[1];
 let rgba = document.getElementsByClassName("rgba");
 let temperature1 = document.querySelector(".temp1");
 let summary1 = document.querySelector(".summary1");
@@ -359,8 +360,8 @@ function fetchandshowweatherdata(base, infodiv, temperature, summary, rgba, vide
     })
     .catch((error) => {
         
-        errordiv.style.display = "block";
-        errordiv.innerText = error;
+        errordiv1.style.display = "block";
+        errordiv1.innerText = error;
         // error message
     });
 }
@@ -405,7 +406,32 @@ if(navigator.onLine)
                     rgba[1], currentlocationvideo,  loc2, icon2,
                      currentlocationdatatable, curloctablecol
                );
+            }, (showError) => 
+                {
+                    switch(error.code)
+                    {
+                        case error.PERMISSION_DENIED:
+                            errordiv2.innerText = "User denied the request for Geolocation.";
+                            break;
+
+                        case error.POSITION_UNAVAILABLE:
+                            errordiv2.innerText = "Location information is unavailable.";
+                            break;
+
+                        case error.TIMEOUT:
+                            errordiv2.innerText = "The request to get user location timed out.";
+                            break;
+
+                        case error.UNKNOWN_ERROR:
+                            errordiv2.innerText = "An unknown error occurred.";
+                            break;
+                    }
             });
+        }
+        else
+        {
+            errordiv2.style.display = "block";
+            errordiv2.innerText = "Geolocation is not supported by this browser.";
         }
     }
 
@@ -417,7 +443,8 @@ if(navigator.onLine)
         if(event.key === "Enter") 
         {
             event.preventDefault();
-            errordiv.style.display = "";
+            errordiv1.style.display = "";
+            errordiv2.style.display = "";
             document.getElementById("searchbutton").click();
         }
     });

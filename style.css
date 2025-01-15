@@ -3,7 +3,6 @@
 }
 
 html {
-    font-size:16px; /* Default font size */
     overflow-x:hidden;
 }
 
@@ -447,10 +446,6 @@ body {
 }
 
 @media screen and (max-width:800px) {
-    html {
-        font-size:14px;
-    }
-
     @-webkit-keyframes backgroundmarquee {
         0% {background-image:url('Images/Weather/800/clear sky.jpg');}
         10% {background-image:url('Images/Weather/800/cloudy.jpg');}
@@ -481,10 +476,6 @@ body {
 }
 
 @media screen and (max-width:600px) {
-    html {
-        font-size:12px;
-    }
-
     @-webkit-keyframes backgroundmarquee {
         0% {background-image:url('Images/Weather/600/clear sky.jpg');}
         10% {background-image:url('Images/Weather/600/cloudy.jpg');}
