@@ -40,7 +40,36 @@ function weatherdescription(x, y)
                         break;
                 }
                 break;
+
+            case 'overcast clouds':
+                switch(true)
+                {
+                    case (window.innerWidth <= 600):
+                        x.src = "Videos/600/overcast clouds.mp4";
+                        break;
     
+                    case (window.innerWidth <= 800):
+                        x.src = "Videos/800/overcast clouds.mp4";
+                        break;
+    
+                    case (window.innerWidth <= 1280):
+                        x.src = "Videos/1280/overcast clouds.mp4";
+                        break;
+    
+                    case (window.innerWidth <= 1920):
+                        x.src = "Videos/1k/overcast clouds.mp4";
+                        break;
+    
+                    case (window.innerWidth <= 2560):
+                        x.src = "Videos/2k/overcast clouds.mp4";
+                        break;
+    
+                    case (window.innerWidth > 2560):
+                        x.src = "Videos/4k/overcast clouds.mp4";
+                        break;
+                }
+                break;
+
             case 'clear sky':
                 switch(true)
                 {
