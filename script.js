@@ -373,7 +373,7 @@ if(navigator.onLine)
 
     function srcloc() 
     {
-        errordiv.style.display = "";
+        errordiv1.style.display = "";
         
         // location
         var locationValue = document.getElementById('searchlocation').value;
