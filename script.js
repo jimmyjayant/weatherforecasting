@@ -437,21 +437,21 @@ if(navigator.onLine)
                );
             }, (showError) => 
                 {
-                    switch(error.code)
+                    switch(showError.code)
                     {
-                        case error.PERMISSION_DENIED:
+                        case showError.PERMISSION_DENIED:
                             errordiv2.innerText = "User denied the request for Geolocation.";
                             break;
 
-                        case error.POSITION_UNAVAILABLE:
+                        case showError.POSITION_UNAVAILABLE:
                             errordiv2.innerText = "Location information is unavailable.";
                             break;
 
-                        case error.TIMEOUT:
+                        case showError.TIMEOUT:
                             errordiv2.innerText = "The request to get user location timed out.";
                             break;
 
-                        case error.UNKNOWN_ERROR:
+                        case showError.UNKNOWN_ERROR:
                             errordiv2.innerText = "An unknown error occurred.";
                             break;
                     }
