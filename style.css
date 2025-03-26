@@ -212,7 +212,7 @@ body {
     gap:5px;
     width:100%;
     position:relative;
-    z-index:2;
+    z-index:3;
     margin-bottom:1rem;
 }
 
@@ -266,6 +266,8 @@ body {
 
 #searchlocdata, #currentlocdata {
     display:none;
+    width:-webkit-fit-content;
+    width:-moz-fit-content;
     width:fit-content;
     margin-left:auto;
     margin-right:auto;
