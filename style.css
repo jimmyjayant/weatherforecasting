@@ -293,6 +293,28 @@ body {
     text-align:right;
 }
 
+.preloader {
+    width:5rem;
+    height:5rem;
+    margin-left:auto;
+    margin-right:auto;
+    border:1rem solid white;
+    border-top:1rem solid grey;
+    border-radius:50%;
+    -webkit-animation:spin 2s linear infinite;
+    animation:spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes spin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
 .info1, .info2 {
     display:none;
     flex-wrap:wrap;

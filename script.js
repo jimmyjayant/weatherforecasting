@@ -301,6 +301,8 @@ let lat;
 let infodiv1 = document.getElementsByClassName("info1")[0];
 let infodiv2 = document.getElementsByClassName("info2")[0];
 let searchlocationvideo = document.getElementById("searchlocationvideo");
+let currentlocationdiv = document.getElementsByClassName("currentlocation")[0];
+let preloaderdiv = document.getElementsByClassName("preloader")[0];
 let currentlocationvideo = document.getElementById("currentlocationvideo");
 let searchedlocationdatatable = document.getElementById("searchlocdata");
 let currentlocationdatatable = document.getElementById("currentlocdata");
@@ -352,6 +354,7 @@ function fetchandshowweatherdata(base, infodiv, temperature, summary, rgba, vide
             let url1 = `https://openweathermap.org/img/wn/${weathericon1}.png`;
             icon.innerHTML = `<img src='${url1}' style='width:clamp(2rem, 2rem + 2vw, 4.5rem);height:clamp(2rem, 2rem + 2vw, 4.5rem);'>`;
             datatable.style.display = "block";
+            preloaderdiv.style.display = "none";
 
             moreinfotablecols[0].childNodes[3].textContent = data.name;
             moreinfotablecols[1].childNodes[3].textContent = data.sys.country;
@@ -455,11 +458,14 @@ if(navigator.onLine)
                             errordiv2.innerText = "An unknown error occurred.";
                             break;
                     }
+                    errordiv2.style.display = "block";
+                    preloaderdiv.style.display = "none";
             });
         }
         else
         {
             errordiv2.style.display = "block";
+            preloaderdiv.style.display = "none";
             errordiv2.innerText = "Geolocation is not supported by this browser.";
         }
     }
@@ -482,4 +488,13 @@ else
 {
     console.log("offline");
     alert("Please connect to the Internet!");
+}
+/*
+if(currentlocationdatatable.style.display === "block")
+{
+    preloaderdiv.style.display = "none";
+}
+*/
+if (window.getComputedStyle(currentlocationdatatable).display === "block") {
+    preloaderdiv.style.display = "none";
 }
