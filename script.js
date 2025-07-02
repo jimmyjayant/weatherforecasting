@@ -375,16 +375,40 @@ function fetchandshowweatherdata(base, infodiv, temperature, summary, rgba, vide
 
             moreinfotablecols[13].childNodes[3].textContent = data.main.sea_level + " m";
             moreinfotablecols[14].childNodes[3].textContent = data.main.grnd_level + " m";
-            let sunrisetimehours = new Date(data.sys.sunrise).getHours();
-            let sunrisetimemins = new Date(data.sys.sunrise).getMinutes();
+
+            /*Since data.sys.sunrise is in UTC so to get time in Indian Standard Time we have to add 5.5*60*60*1000 milliseconds to it and get new date because the IST is 5:30 hours ahead of UTC*/
+            let sunrisetimehours = new Date(data.sys.sunrise * 1000).getHours();
+            let sunrisetimemins = new Date(data.sys.sunrise * 1000).getMinutes();
+            console.log(sunrisetimehours, sunrisetimemins);
+
+            
+            if(sunrisetimehours > 12)
+            {
+                sunrisetimehours = sunrisetimehours - 12;
+            }
+
+            // If sunrisetime minutes is less than 10, then pad the mins with 0 from the start
+            if(sunrisetimemins < 10)
+            {
+                sunrisetimemins = sunrisetimemins.toString().padStart(2,'0');
+            }
+
 
             moreinfotablecols[15].childNodes[3].textContent = sunrisetimehours + ":" + sunrisetimemins + " AM";
-            let sunsettimehours = new Date(data.sys.sunset).getHours();
-            let sunsettimemins = new Date(data.sys.sunset).getMinutes();
+
+            let sunsettimehours = new Date(data.sys.sunset * 1000).getHours();
+            let sunsettimemins = new Date(data.sys.sunset * 1000).getMinutes();
+            console.log(sunsettimehours, sunrisetimemins);
 
             if(sunsettimehours > 12)
             {
-                sunrisetimehours = 24 - sunrisetimehours;
+                sunsettimehours = sunsettimehours - 12;
+            }
+
+            // If sunsettime minutes is less than 10, then pad the mins with 0 from the start
+            if(sunsettimemins < 10)
+            {
+                sunsettimemins = sunsettimemins.toString().padStart(2,'0');
             }
             
             moreinfotablecols[16].childNodes[3].textContent = sunsettimehours + ":" + sunsettimemins + " PM";
